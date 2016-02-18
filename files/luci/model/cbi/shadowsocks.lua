@@ -8,9 +8,9 @@ local uci = luci.model.uci.cursor()
 local ipkg = require("luci.model.ipkg")
 
 if luci.sys.call("pidof ss-redir >/dev/null") == 0 then
-	m = Map(shadowsocks, translate("ShadowSocks"), translate("ShadowSocks is running"))
+	m = Map(shadowsocks, translate("ShadowSocksR"), translate("ShadowSocksR is running"))
 else
-	m = Map(shadowsocks, translate("ShadowSocks"), translate("ShadowSocks is not running"))
+	m = Map(shadowsocks, translate("ShadowSocksR"), translate("ShadowSocksR is not running"))
 end
 
 local chnroute = uci:get_first("chinadns", "chinadns", "chnroute")
@@ -35,6 +35,24 @@ local encrypt_methods = {
 	"salsa20",
 	"chacha20",
 	"chacha20-ietf",
+}
+
+local protocol = {
+	"origin",
+	"verify_simple",
+	"verify_deflate",
+	"verify_sha1",
+	"auth_simple",
+	"auth_sha1",
+	"auth_sha1_v2",
+}
+
+obfs = {
+	"plain",
+	"http_simple",
+	"tls_simple",
+	"random_head",
+	"tls1.0_session_auth",
 }
 
 ipkg.list_installed("shadowsocks-libev-spec-polarssl", function(n, v, d)
@@ -98,6 +116,15 @@ o.rmempty = false
 
 o = s:option(ListValue, "encrypt_method", translate("Encrypt Method"))
 for _, v in ipairs(encrypt_methods) do o:value(v) end
+o.rmempty = false
+
+o = s:option(ListValue, "protocol", translate("protocol"))
+for _, v in ipairs(protocol) do o:value(v) end
+o.rmempty = false
+
+
+o = s:option(ListValue, "obfs", translate("obfs"))
+for _, v in ipairs(obfs) do o:value(v) end
 o.rmempty = false
 
 -- [[ UDP Forward ]]--

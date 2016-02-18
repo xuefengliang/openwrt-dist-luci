@@ -10,8 +10,8 @@ msgstr "启用"
 msgid "Disable"
 msgstr "停用"
 
-msgid "ShadowSocks is running"
-msgstr "ShadowSocks 运行中"
+msgid "ShadowSocksR is running"
+msgstr "ShadowSocksR 运行中"
 
 msgid "ShadowSocks is not running"
 msgstr "ShadowSocks 未运行"
@@ -57,6 +57,12 @@ msgstr "密码"
 
 msgid "Encrypt Method"
 msgstr "加密方式"
+
+msgid "protocol"
+msgstr "传输协议"
+
+msgid "obfs"
+msgstr "混淆插件"
 
 msgid "UDP Forward"
 msgstr "UDP转发"
