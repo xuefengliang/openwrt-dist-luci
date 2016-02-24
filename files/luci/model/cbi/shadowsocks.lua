@@ -40,8 +40,6 @@ local encrypt_methods = {
 local protocol = {
 	"origin",
 	"verify_simple",
-	"verify_deflate",
-	"verify_sha1",
 	"auth_simple",
 	"auth_sha1",
 	"auth_sha1_v2",
@@ -50,8 +48,6 @@ local protocol = {
 obfs = {
 	"plain",
 	"http_simple",
-	"tls_simple",
-	"random_head",
 	"tls1.0_session_auth",
 }
 
