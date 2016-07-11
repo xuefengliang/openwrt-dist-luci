@@ -49,6 +49,7 @@ obfs = {
 	"plain",
 	"http_simple",
 	"tls1.0_session_auth",
+	"tls1.2_ticket_auth",
 }
 
 ipkg.list_installed("shadowsocks-libev-spec-polarssl", function(n, v, d)
