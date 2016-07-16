@@ -19,7 +19,7 @@ PKG_MAINTAINER:=Jian Chang <aa65535@live.com>
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
 
 # Compile PO2LMO
-PO2LMO:=$(BUILD_DIR)/luci/tools/po2lmo
+PO2LMO:=./file/luci/tools/po2lmo
 
 include $(INCLUDE_DIR)/package.mk
 
