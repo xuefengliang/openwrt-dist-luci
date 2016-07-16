@@ -1,8 +1,8 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
-msgid "ShadowSocks"
-msgstr "ShadowSocks"
+msgid "ShadowSocksR"
+msgstr "ShadowSocksR"
 
 msgid "Enable"
 msgstr "启用"
@@ -13,7 +13,7 @@ msgstr "停用"
 msgid "ShadowSocksR is running"
 msgstr "ShadowSocksR 运行中"
 
-msgid "ShadowSocks is not running"
+msgid "ShadowSocksR is not running"
 msgstr "ShadowSocksR 未运行"
 
 msgid "Global Setting"
