@@ -10,13 +10,16 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=openwrt-dist-luci
 PKG_VERSION:=1.3.8
-PKG_RELEASE:=1
+PKG_RELEASE:=7
 
 PKG_LICENSE:=GPLv3
 PKG_LICENSE_FILES:=LICENSE
 PKG_MAINTAINER:=Jian Chang <aa65535@live.com>
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
+
+# Compile PO2LMO
+PO2LMO:=$(BUILD_DIR)/luci/tools/po2lmo
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -70,7 +73,8 @@ define Package/openwrt-dist-luci/install
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/controller
 	$(INSTALL_DATA) ./files/luci/controller/$(2).lua $(1)/usr/lib/lua/luci/controller/$(2).lua
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/i18n
-	$(INSTALL_DATA) ./files/luci/i18n/$(2).*.lmo $(1)/usr/lib/lua/luci/i18n
+	## $(INSTALL_DATA) ./files/luci/i18n/$(2).*.lmo $(1)/usr/lib/lua/luci/i18n
+	$(PO2LMO) ./files/luci/i18n/$(2).*.po $(1)/usr/lib/lua/luci/i18n/$(2).*.lmo
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/model/cbi
 	$(INSTALL_DATA) ./files/luci/model/cbi/$(2).lua $(1)/usr/lib/lua/luci/model/cbi/$(2).lua
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
