@@ -39,15 +39,19 @@ local encrypt_methods = {
 
 local protocol = {
 	"origin",
-	"verify_simple",
-	"auth_simple",
-	"auth_sha1",
+	"verify_deflate",
+	"verify_sha1",
 	"auth_sha1_v2",
+	"auth_sha1_v4",
+	"auth_aes128_md5",
+	"auth_aes128_sha1",
 }
 
 obfs = {
 	"plain",
 	"http_simple",
+	"http_post",
+	"random_head",
 	"tls1.2_ticket_auth",
 }
 
