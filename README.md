@@ -32,7 +32,7 @@ APP 列表
 tar xjf OpenWrt-SDK-ar71xx-for-linux-x86_64-gcc-4.8-linaro_uClibc-0.9.33.2.tar.bz2
 cd OpenWrt-SDK-ar71xx-*
 # 获取 Makefile
-git clone -b shadowsocksR https://github.com/etnperlong/openwrt-dist-luci.git package/openwrt-dist-luci
+git clone -b dev https://github.com/xuefengliang/openwrt-dist-luci.git package/openwrt-dist-luci
 # 选择要编译的包 LuCI -> 3. Applications
 make menuconfig
 # 开始编译
