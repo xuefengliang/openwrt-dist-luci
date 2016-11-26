@@ -51,7 +51,6 @@ obfs = {
 	"plain",
 	"http_simple",
 	"http_post",
-	"random_head",
 	"tls1.2_ticket_auth",
 }
 
