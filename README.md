@@ -1,17 +1,6 @@
 OpenWrt-dist LuCI
 ===
 
-APP 列表
----
- > 点击链接可下载预编译 IPK  
-
- Name                           | Description
- -------------------------------|-----------------------------------------------
- [luci-app-chinadns][1]         | LuCI Support for ChinaDNS
- [luci-app-redsocks2][3]        | LuCI Support for RedSocks2
- [luci-app-shadowvpn][2]        | LuCI Support for ShadowVPN
- [luci-app-shadowsocks-spec][0] | LuCI Support for shadowsocks-libev-spec
-
 适用项目
 ---
  > 默认不带相应的 UCI 配置文件, 需要搭配以下软件包使用  
